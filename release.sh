@@ -21,14 +21,14 @@ curl -X POST -H "Authorization: token $GITHUB_API_TOKEN" \
 
 # upload assets
 cd ./app/bin
-tar -zcf markdown-preview-macos.tar.gz markdown-preview-macos-x64
+tar -zcf markdown-preview-macos-x64.tar.gz markdown-preview-macos-x64
 tar -zcf markdown-preview-macos-arm64.tar.gz markdown-preview-macos-arm64
 tar -zcf markdown-preview-linux-arm64.tar.gz markdown-preview-linux-arm64
-tar -zcf markdown-preview-linux-x64.tar.gz markdown-preview-linux-arm64-x64
+tar -zcf markdown-preview-linux-x64.tar.gz markdown-preview-linux-x64
 zip markdown-preview-win-arm64.zip markdown-preview-win-arm64.exe
 zip markdown-preview-win-x64.zip markdown-preview-win-x64.exe
 
-declare -a files=("markdown-preview-win.zip" "markdown-preview-macos.tar.gz" "markdown-preview-macos-arm64.tar.gz"  "markdown-preview-linux.tar.gz")
+declare -a files=("markdown-preview-win-x64.zip" "markdown-preview-win-arm64.zip" "markdown-preview-macos-x64.tar.gz" "markdown-preview-macos-arm64.tar.gz"  "markdown-preview-linux-x64.tar.gz"  "markdown-preview-linux-arm64.tar.gz")
 
 # Validate token.
 curl -o /dev/null -sH "$AUTH" $GH_REPO || { echo "Error: Invalid repo, token or network issue!";  exit 1; }
