@@ -71,17 +71,17 @@ function! mkdp#util#get_platform() abort
     if system('arch') =~? 'arm64'
       return 'win-arm64'
     endif
-    return 'win-x86'
+    return 'win-x64'
   elseif has('mac') || has('macvim')
     if system('arch') =~? 'arm64'
       return 'macos-arm64'
     endif
-    return 'macos-x86'
+    return 'macos-x64'
   endif
   if system('arch') =~? 'arm64'
     return 'linux-arm64'
   endif
-  return 'linux-x86'
+  return 'linux-x64'
 endfunction
 
 function! s:on_exit(autoclose, bufnr, Callback, job_id, status, ...)
