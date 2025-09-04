@@ -3,7 +3,12 @@
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
 $repo = "hostmyapps-git/markdown-preview.nvim"
-$file = "markdown-preview-win.zip"
+if ($env:PROCESSOR_ARCHITECTURE -eq "ARM64") {
+    $file = "markdown-preview-win-arm64.zip"
+}
+else {
+    $file = "markdown-preview-win-x64.zip"
+}
 
 $releases = "https://api.github.com/repos/$repo/releases"
 

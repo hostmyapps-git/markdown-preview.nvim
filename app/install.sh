@@ -80,8 +80,9 @@ download() {
 
 arch=$(uname -sm)
 case "${arch}" in
-  "Linux x86_64") download markdown-preview-linux.tar.gz ;;
-  "Linux i686") download markdown-preview-linux.tar.gz ;;
+  "Linux x86_64") download markdown-preview-linux-x64.tar.gz ;;
+  "Linux arm64") download markdown-preview-linux-arm64.tar.gz ;;
+# "Linux i686") download markdown-preview-linux.tar.gz ;;
   "Darwin x86_64") download markdown-preview-macos.tar.gz ;;
   "Darwin arm64") download markdown-preview-macos-arm64.tar.gz ;;
   *) info "No pre-built binary available for ${arch}.";;
