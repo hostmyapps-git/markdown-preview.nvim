@@ -6,7 +6,8 @@ set -e
 # Create tag and push
 tag="v$(node -p "require('./package.json').version")"
 git tag -f "$tag" -m "Release $tag"
-git push --tags
+#git push --tags
+git push origin "$tag"
 
 GH_API="https://api.github.com"
 GH_REPO="$GH_API/repos/hostmyapps-git/markdown-preview.nvim"
