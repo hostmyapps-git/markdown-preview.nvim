@@ -1,6 +1,6 @@
 {
   "name": "markdown-preview",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "markdown preview plugin for (neo)vim",
   "bin": "./app/server.js",
   "repository": "https://github.com/hostmyapps-git/markdown-preview.nvim.git",
